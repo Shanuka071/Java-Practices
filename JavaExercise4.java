@@ -51,7 +51,7 @@ static int operator(){
                 for(int i=1;i<number1.length;i++){
                     
                     number3-=number1[i];
-                }
+                } 
                 System.out.println("The differentiation number are "+number3);
             
                 break;
