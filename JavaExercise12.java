@@ -9,6 +9,7 @@ static int select_package(){
     System.out.println("1.Primum package ");
     System.out.println("2.Silve package");
     System.out.println("3.Normal Package");
+    System.out.println("-----------------------------------------------------------");
     int number=obj1.nextInt();
 
     return number;
@@ -23,6 +24,7 @@ static void package_details( int number){
             System.out.println("2.Hotel Services...");
             System.out.println("3.A buffer set for the 100 plates...");
             System.out.println("4.A Dj sound system with the DJ artist...");
+            System.out.println("-----------------------------------------------------------");
             break;
         case 2:
             System.out.println("*******Thank you for selecting the Silver Package*******");
@@ -30,14 +32,14 @@ static void package_details( int number){
             System.out.println("1.Wedding Cars...");
             System.out.println("2.Hotel Services...");
             System.out.println("3.A buffer set for the 100 plates...");
-            
+            System.out.println("-----------------------------------------------------------");
             break;    
         case 3:
             System.out.println("*******Thank you for selecting the Normal Package*******");
             System.out.println("Here are our services that are belong to the Normal Package..."); 
             System.out.println("2.Hotel Services...");
             System.out.println("3.A buffer set for the 100 plates...");
-            
+            System.out.println("-----------------------------------------------------------");
             break;
         default:
             System.out.println("Enter the valid number for continuing the procedure.");
@@ -57,6 +59,7 @@ static void package_details( int number){
                 System.out.println("2.Mercedize Benz.");
                 System.out.println("3.BMW.");
                 System.out.println("4.Prius.");
+                System.out.println("-----------------------------------------------------------");
                 int number3=obj1.nextInt();
                //choose the customer's choice Car...
 
@@ -66,19 +69,21 @@ static void package_details( int number){
                     System.out.println("*There is a extra charge for additional km");
                     double price1=10000.00;
                     System.out.println("*The price of car is Rs."+price1);
+                    System.out.println("-----------------------------------------------------------");
                     break;
                 case 2:
                     System.out.println("*There is a free 100Km ");
                     System.out.println("*There is a extra charge for additional km");
                     double price2=10000.00;
                     System.out.println("*The price of car is Rs."+price2);
-
+                    System.out.println("-----------------------------------------------------------");
                     break;    
                 case 3:
                     System.out.println("*There is a free 100Km ");
                     System.out.println("*There is a extra charge for additional km");
                     double price3=10000.00;
                     System.out.println("*The price of car is Rs."+price3);
+                    System.out.println("-----------------------------------------------------------");
                     break;
 
                 case 4:
@@ -86,6 +91,7 @@ static void package_details( int number){
                     System.out.println("*There is a extra charge for additional km");
                     double price4=10000.00;
                     System.out.println("*The price of car is "+price4);
+                    System.out.println("-----------------------------------------------------------");
                     break;    
                 default:
                     System.out.println("Please a enter the valid number for this.");
@@ -98,6 +104,7 @@ static void package_details( int number){
                 System.out.println("*All the Hotel Servies are free of Charge...");
                 System.out.println("*There is no any extra payment for this package...");
                 System.out.println("*You can customerize the services also.");
+                System.out.println("-----------------------------------------------------------");
                 break;
             case 3:
                 System.out.println(".......BufferSet.........");
@@ -106,12 +113,15 @@ static void package_details( int number){
                 System.out.println("*Dinning tables deccorations...");       
                 System.out.println("*Buffer set includes only 100 plates only...");
                 System.out.println("*For additional chargers are charged per each plates...");
+                System.out.println("-----------------------------------------------------------");
+                break;
             case 4:
                 System.out.println(".........DJ Sound system.........");
                 System.out.println("*The Dj sound system with free artist is given...");
                 System.out.println("*Free smoking machine...");
                 System.out.println("*free light system is provided...");
                 System.out.println("*Free wireless mics are supplied...");
+                System.out.println("-----------------------------------------------------------");
                 break;    
             default:
                 System.out.println("Enter the valid number for continue the programme...1");
@@ -143,7 +153,29 @@ static void package_details( int number){
 
     public static void main(String[] args){
         int number=select_package();
-        package_details(number);
-        package_deatails1(number);
+        
+        
+        int choice=1;
+        // User can select number of times for the inquery.
+        while(choice==1){
+        System.out.println("Enter ,");
+        System.out.println("1.To continue.");
+        System.out.println("2.To end the program.");
+        System.out.println("*************************************************************");
+        choice=obj1.nextInt();
+
+            if(choice==1){
+                package_details(number);
+                package_deatails1(number);    
+
+            }
+             
+            else{
+                System.out.println("The program is over...");
+                System.out.println("*******Thank You for selecting the A.S.P.Wedding Planner*********");
+            }
+        }
+        }
+        
     }
-}
+
